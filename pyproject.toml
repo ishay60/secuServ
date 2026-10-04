@@ -2,6 +2,10 @@
 name = "secuserv"
 version = "0.1.0"
 description = "Conformance self-test for the safety guardrails of your own, locally-run MCP server"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Ishay Rosengarten" }]
+keywords = ["mcp", "model-context-protocol", "security", "conformance", "langgraph"]
 requires-python = ">=3.12"
 dependencies = [
     "anthropic",
@@ -9,6 +13,10 @@ dependencies = [
     "mcp",
     "pydantic>=2",
 ]
+
+[project.urls]
+Repository = "https://github.com/ishay60/secuServ"
+Issues = "https://github.com/ishay60/secuServ/issues"
 
 [project.scripts]
 secuserv = "secuserv.cli:main"

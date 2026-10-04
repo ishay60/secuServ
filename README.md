@@ -1,7 +1,18 @@
 # secuserv
 
-A command-line self-test for the safety guardrails of **your own, locally-run MCP server**.
-It connects to one server, lists its tools, runs five checks, and prints a pass/fail report.
+[![tests](https://github.com/ishay60/secuServ/actions/workflows/tests.yml/badge.svg)](https://github.com/ishay60/secuServ/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)
+
+**Does your MCP server's safety story actually hold?** `secuserv` is a command-line self-test you
+run against your own, locally-run MCP server. It connects, lists the tools, runs five guardrail
+checks, and prints a pass/fail report with evidence for every verdict.
+
+```bash
+git clone https://github.com/ishay60/secuServ.git && cd secuServ
+uv sync
+uv run secuserv run --config server.json
+```
 
 It is a conformance test, not an attack tool: it refuses to connect to anything that is not on
 this machine, and it only ever calls tools the server itself marks read-only.
@@ -112,3 +123,7 @@ plan leaves out is run anyway.
 ```bash
 uv run pytest
 ```
+
+## License
+
+[MIT](LICENSE)
